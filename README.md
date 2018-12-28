@@ -13,7 +13,23 @@
 
 ### Data
 
-The scripts assume that 
+The system takes unmodified anime episodes as input. It assumes these are in `.mkv` format and that the first audio and susbtitle tracks, as listed by `mkvmerge --identify`, are the ones that should be used to build the model. This is usually the case and the only issue that may arise because of this assumption is that, if a series has it's first subtitle track in japanese and the second one in english, the model is going to use the japanese one, resulting in a chatbot that speaks japanese. If that's the case, the subtitle track being used can be changed by modifying the definition of the variable `subtitleTrack` in `main.py`, setting it to the 0-based index of the subtitle track (so if it's set to `0`, the system is gonna use the first subtitle track listed by `mkvmerge --identify`, if it's set to `2`, it's gonna use the third subtitle track listed by `mkvmerge --identify`, and so on).
+
+These episodes should be in the `series` folder, organized by series, so that all the episodes from a series are in the same folder, thus following this folder structure:
+- `series`  
+  - `series/Shingeki no Kyojin`  
+    - `series/Shingeki no Kyojin/1x01.mkv`  
+    - `series/Shingeki no Kyojin/1x02.mkv`  
+    - `series/Shingeki no Kyojin/1x03.mkv`  
+    - `...`  
+    - `series/Shingeki no Kyojin/2x01.mkv`  
+    - `series/Shingeki no Kyojin/2x02.mkv`  
+    - `...`  
+  - `series/Sword Art Online`  
+    - `series/Sword Art Online/Episode 1x01.mkv`  
+    - `series/Sword Art Online/Episode 1x02.mkv`  
+    - `series/Sword Art Online/Episode 1x03.mkv`  
+    - `...`  
 
 ### Run
 ```
