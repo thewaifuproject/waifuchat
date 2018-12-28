@@ -1,4 +1,4 @@
-# waifuchat
+# Waifu Chat
 AI-based chatbot trained on specific waifus' speech
 
 ## Using it
@@ -28,13 +28,21 @@ python3 main.py
 6. Train a seq2seq[6] model
 7. Serve the chatbot as a discord bot
 
+## Why?
+> No waifu no laifu
+<p align="right">- Adolf Hitler</p>
 
 ## References
 [1] Snyder, D. and Garcia-Romero, D. and Sell, G. and Povey, D. and Khudanpur, S. 2018. X-vectors: Robust DNN Embeddings for Speaker Recognition. 2018 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP).
+
 [2] http://kaldi-asr.org/models/m7 (VoxCeleb Xvector System 1a), retrieved the 19th of December of 2018.
+
 [3] Nagrani, A. and Chung, J.~S. and Zisserman, A. 2017. VoxCeleb: a large-scale speaker identification dataset. INTERSPEECH.
+
 [4] J. S. Chung, A. Nagrani, A. Zisserman. 2018. VoxCeleb2: Deep Speaker Recognition. INTERSPEECH.
+
 [5] DBSCAN
+
 [6] Ilya Sutskever, Oriol Vinyals and Quoc V. Le. 2014. Sequence to Sequence Learning with Neural Networks.  Conference and Workshop on Neural Information Processing Systems (NIPS).
 
 
