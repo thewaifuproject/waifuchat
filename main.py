@@ -24,6 +24,8 @@ for serie in listdir('./series'):
             run(["mkvextract",  filename, "tracks", subtracks[0]+":temp/subs"])
             subs = pysubs2.load("temp/subs", encoding="utf-8")
             for line in subs:
+                if line.start==line.end:
+                    continue
                 audioFilename=str(len(data[serie]))
                 run(["mkdir", "-p", "temp/utt/test/aac/"+audioFilename+"/01dfn2spqyE"])
                 run(["ffmpeg", "-loglevel", "quiet", "-i", "temp/audio", "-ss",  formatTime(line.start), "-to", formatTime(line.end), "-ar", "16000", "temp/utt/test/aac/"+audioFilename+"/01dfn2spqyE/"+audioFilename+".m4a"])
