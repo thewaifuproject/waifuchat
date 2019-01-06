@@ -30,8 +30,10 @@ for serie in listdir('./series'):
                 run(["mkdir", "-p", "temp/utt/test/aac/"+audioFilename+"/01dfn2spqyE"])
                 run(["ffmpeg", "-loglevel", "quiet", "-i", "temp/audio", "-ss",  formatTime(line.start), "-to", formatTime(line.end), "-ar", "16000", "temp/utt/test/aac/"+audioFilename+"/01dfn2spqyE/"+audioFilename+".m4a"])
                 data[serie].append({
-                    'text':line.text,
-                    'speaker':None
+                    'text': line.text,
+                    'speaker': None,
+                    'start': line.start,
+                    'end': line.end
                     })
     run(["bash", "kaldi.sh"]) # Compute xvectors using Kaldi
 
